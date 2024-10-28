@@ -18,3 +18,22 @@ for (var row = 1; row <= n; row++) {
 
 }
 // piramid
+let rows = 5; // Number of rows for the pyramid
+
+for (let i = 1; i <= rows; i++) {
+    let spaces = '';
+    let stars = '';
+
+    // Create leading spaces
+    for (let j = 0; j < rows - i; j++) {
+        spaces += ' ';
+    }
+
+    // Create asterisks
+    for (let k = 0; k < (2 * i - 1); k++) {
+        stars += '*';
+    }
+
+    // Combine spaces and stars and log to the console
+    console.log(spaces + stars);
+}
