@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+</head>
+
+<body>
+    <!-- name atribute is a key ro show the data -->
+
+    <form action="#" name="form">
+        <fieldset>
+            <legend>Rafi</legend>
+            <label for="">Name</label><br>
+            <input type="text" name="name"><br><br>
+
+            <label for="">Adress</label><br>
+            <textarea name="address" id=""></textarea><br><br>
+
+            <label for="">Email</label><br>
+            <textarea name="email" id=""></textarea><br><br>
+
+            <label for="">Password</label><br>
+            <input type="password" name="pin"><br><br>
+
+            <p>
+                <label for="">Gender:</label>
+                Male: <input type="radio" name="gen" id="" value="Male">
+                Female: <input type="radio" name="gen" id="" value="Female">
+            </p>
+            <br><br>
+            Subject: 
+            
+                <div name="course">
+                    
+                    English<input type="checkbox" name="ck" value="English" id="">
+                    Bangla<input type="checkbox" name="ck" value="Bangla" id="">
+                    Urdu<input type="checkbox" name="ck" value="urdu" id="">
+                    Rasian<input type="checkbox" name="ck" value="Rasian" id="">
+                </div>
+            
+
+            <input onclick="my()" id type="submit" value="submit"  id="btn">
+            <input type="reset" value="reset" id="">
+
+
+        </fieldset>
+    </form>
+
+    <script>
+        function my(){
+            // to open new window
+            doc=open('','','width=300px, height=400px');
+
+            
+            var name = document.form.name.value;
+            var address = document.form.address.value;
+            var email = document.form.email.value;
+            var pin = document.form.pin.value;
+            var gender="";
+
+            for(i=0; i<document.form.gen.length;i++){
+                if(document.form.gen[i].checked){
+                    gender=document.form.gen[i].value;
+                }
+            }
+            var course="";
+            
+            for(i=0; i<document.form.ck.length;i++){
+                if(document.form.ck[i].checked){
+                    course+=document.form.ck[i].value+", ";
+                }
+            }
+            
+            //doc.document.write("hello");
+
+            with(doc.document){
+                write("Name:- "+name);
+                write("<br>");
+                write("Address:- "+address);
+                write("<br>");
+                write("Email:- "+email);
+                write("<br>");
+                write("Password:- "+pin);
+                write("<br>");
+                write("Gender:- "+gender);
+                write("<br>");
+                write("Course:- "+course);
+                write("<br>");
+
+                write(" <input type='button' value='close me' onclick='self.close();' >" );
+
+            }
+
+
+
+
+
+
+
+
+
+            
+           doc.document.getElementById('btn').addEventListener("click",function (){
+            var p=document.getElementById('p');
+            p.style.display='block'
+
+                
+            })
+           
+
+        }
+
+    </script>
+
+</body>
+
+</html>
