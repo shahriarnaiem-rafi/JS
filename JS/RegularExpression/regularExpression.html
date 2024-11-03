@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expration</title>
+</head>
+<body>
+
+   <script>
+
+         //search method
+         let text="I am Rafi";
+         let searcH=text.search("Rafi");
+         document.write(searcH);
+         document.write("</br>");
+
+        //replace
+        let replacE=text.replace("Rafi","Shahriar");
+        document.write(replacE);
+        document.write("</br>");
+        // use of / /i  sensitiviti  
+        let replacE2=text.replace(/Am/i,"s");
+        document.write(replacE2);
+        document.write("</br>");
+
+        //match
+        let matcH=text.match(/\s/g);
+        document.write(matcH);
+
+
+         
+
+
+
+   </script>
+                                                                  
+
+    
+</body>
+</html>
