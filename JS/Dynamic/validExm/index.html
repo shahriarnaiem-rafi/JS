@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic </title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <form action="#" name="form">
+        <label for="">Name: </label>
+        <input type="text" placeholder="enter name" name="name" id="myName" onblur="nameCheck()">
+        <br><br>
+
+
+        <label for="">Email</label>
+        <input type="text" placeholder="enter email" name="email" id="myEmail" onblur="emailCheck()"><br><br>
+       
+        <p>Gender
+            <input type="radio" value="Male" name="gender">Male
+            <input type="radio" value="Female" name="gender">Female
+        </p>
+        <label for="">Country</label>
+        <select name="select">
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Iran" selected>Iran</option>
+            <option value="Afgan">Afgan</option>
+            <option value="Turki">Turki</option>
+        </select><br><br>
+
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit" onclick="subMitted()">
+
+    </form>
+
+    <script>
+        function nameCheck() {
+            var name = document.getElementById('myName');
+            var nameNan = /^[A-Za-z0-9]{4,11}$/;
+            if (!nameNan.test(name.value)) {
+                alert("enter valid name");
+                return false;
+            }
+            else {
+                document.getElementById('myName').style.color = 'red';
+            }
+            return true;
+        }
+
+        function emailCheck() {
+            var email = document.getElementById('myEmail');
+            var emailNan = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
+            if (!emailNan.test(email.value)) {
+                alert("enter valid email");
+                return false;
+            }
+            else {
+                document.getElementById('myEmail').style.color = 'red';
+            }
+            return true;
+        }
+
+        function subMitted() {
+
+            
+            win = open('', '', 'width=400px; height=300px;');
+            var name = document.form.name.value;
+            var email = document.form.email.value;
+            
+            var gender=" ";
+            for(i=0;i<document.form.gender.length;i++){
+                if(document.form.gender[i].checked){
+                    gender=document.form.gender[i].value;         
+                }
+            }
+
+
+
+            var country = document.form.select.value;
+
+            with (win.document) {
+                write("<body style='margin-left:100px; border:2px solid black' >");
+
+                write("Name: " + name);
+                write("<br>");
+                write("Email: " + email);
+                write("<br>");
+                write("Gender: "+gender);
+                write("<br>");
+
+                write("Country: " + country);
+                write("<br>");
+               
+
+
+
+
+
+
+                write("<br>");
+                write("<input type='button' value='Close' onclick='self.close()' style='color:black; padding:5px;  border-radius: 5px 0px 5px 0px ;background-color:lightblue; '>")
+
+                write("<input type='button' value='Print' onclick='print()' style='color:black;  background-color:lightblue;  margin-left:10px; padding:5px;  border-radius: 5px 0px 5px 0px ;'>");
+
+                write("<br>");
+                write("Thank you for submitting you details.");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
