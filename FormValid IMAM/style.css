@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #d1d1d1;
+}
+
+#form_valid{
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 25px;
+    box-shadow: 6px 6px 15px rgb(170, 170, 170);
+    border-radius: 10px;
+}
+
+#label_and_input label{
+    font-size: 21px;
+    font-weight: 500;
+}
+#label_and_input input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #8b8b8b;
+    outline: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+#Gander label{
+    font-size: 21px;
+    margin-top: 5px;
+}
+#Gander input{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+#select label{
+    font-size: 21px;
+}
+#select select{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #8b8b8b;
+    margin-top: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+#submitBtn{
+    width: 100%;
+    padding: 10px;
+    background-color: #bb00bbc7;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-size: 21px;
+}
+#education label{
+    font-size: 21px;
+}
+#education input{
+    margin-left: 20px;
+}

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic </title>
     <style>
-        
+
     </style>
 </head>
 
 <body>
-    <form action="#" name="form">
+    <form action="#" name="form" id="form2">
         <label for="">Name: </label>
         <input type="text" placeholder="enter name" name="name" id="myName" onblur="nameCheck()">
         <br><br>
@@ -19,7 +19,9 @@
 
         <label for="">Email</label>
         <input type="text" placeholder="enter email" name="email" id="myEmail" onblur="emailCheck()"><br><br>
-       
+        <label for="">Password</label>
+        <input type="password">
+
         <p>Gender
             <input type="radio" value="Male" name="gender">Male
             <input type="radio" value="Female" name="gender">Female
@@ -67,15 +69,16 @@
 
         function subMitted() {
 
-            
+
             win = open('', '', 'width=400px; height=300px;');
+
             var name = document.form.name.value;
             var email = document.form.email.value;
-            
-            var gender=" ";
-            for(i=0;i<document.form.gender.length;i++){
-                if(document.form.gender[i].checked){
-                    gender=document.form.gender[i].value;         
+
+            var gender = " ";
+            for (i = 0; i < document.form.gender.length; i++) {
+                if (document.form.gender[i].checked) {
+                    gender = document.form.gender[i].value;
                 }
             }
 
@@ -90,12 +93,12 @@
                 write("<br>");
                 write("Email: " + email);
                 write("<br>");
-                write("Gender: "+gender);
+                write("Gender: " + gender);
                 write("<br>");
 
                 write("Country: " + country);
                 write("<br>");
-               
+
 
 
 
@@ -111,6 +114,7 @@
                 write("Thank you for submitting you details.");
             }
         }
+
     </script>
 
 

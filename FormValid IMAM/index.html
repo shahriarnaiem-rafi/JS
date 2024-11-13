@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section id="form_valid">
+        <form action="" name="form">
+            <h2 class="text-center text-2xl font-semibold mb-5">Form Validation</h2>
+            <div id="label_and_input">
+                <label for="">Full Name</label><br>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name"><br>
+                <div style="margin-left: 10px; margin-bottom: 15px;" id="message"></div>
+                <label for="">Email</label><br>
+                <input type="text" name="email" id="email" placeholder="Enter Your Email"><br>
+                <div style="margin-left: 10px; margin-bottom: 15px;" id="emailMessage"></div>
+                <label for="">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="Enter Your Password"><br>
+            </div>
+            <div id="select">
+                <label for="">Round:</label><br> 
+                <select name="select" id="">
+                    <option value="">Round</option>
+                    <option value="60">60</option>
+                    <option value="61">61</option>
+                    <option value="62">62</option>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                </select>
+            </div>
+            <div id="Gander">
+                <label for="">Gender: </label>
+                <input type="radio" name="gnd" id="male" value="Male"> Male
+                <input type="radio" name="gnd" id="female" value="Female"> Female
+            </div>
+            <div id="education">
+                <label for="">Education:</label>
+                <input type="checkbox" name="edu" id="education_check" value="SSC"> SSC
+                <input type="checkbox" name="edu" id="education_check" value="HSC"> HSC
+                <input type="checkbox" name="edu" id="education_check" value="BSC"> BSC
+            </div>
+            <div>
+                <button id="submitBtn" type="reset">Submit</button>
+            </div>
+        </form>
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
